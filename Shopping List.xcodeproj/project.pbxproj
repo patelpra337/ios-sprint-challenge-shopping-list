@@ -16,6 +16,7 @@
 		ABED79F923A564D700C95509 /* ShoppingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED79F823A564D700C95509 /* ShoppingListController.swift */; };
 		ABED79FB23A5651300C95509 /* ShoppingListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED79FA23A5651300C95509 /* ShoppingListCollectionViewController.swift */; };
 		ABED79FD23A5658B00C95509 /* ShoppingItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED79FC23A5658B00C95509 /* ShoppingItemCollectionViewCell.swift */; };
+		ABED79FF23A5700F00C95509 /* ShoppingListCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED79FE23A5700F00C95509 /* ShoppingListCollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		ABED79F823A564D700C95509 /* ShoppingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListController.swift; sourceTree = "<group>"; };
 		ABED79FA23A5651300C95509 /* ShoppingListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCollectionViewController.swift; sourceTree = "<group>"; };
 		ABED79FC23A5658B00C95509 /* ShoppingItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABED79FE23A5700F00C95509 /* ShoppingListCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				ABED79F623A564C600C95509 /* ShoppingItem.swift */,
 				ABED79F823A564D700C95509 /* ShoppingListController.swift */,
+				ABED79FE23A5700F00C95509 /* ShoppingListCollectionViewDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABED79FF23A5700F00C95509 /* ShoppingListCollectionViewDelegate.swift in Sources */,
 				ABED79F723A564C600C95509 /* ShoppingItem.swift in Sources */,
 				ABED79FD23A5658B00C95509 /* ShoppingItemCollectionViewCell.swift in Sources */,
 				4613E91421143BFC00E7FF73 /* ShoppingListDetailViewController.swift in Sources */,

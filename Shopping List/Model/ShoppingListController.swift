@@ -10,7 +10,30 @@ import Foundation
 
 class ShoppingListController {
     
+    init() {
+        if self.shoppingItemsPreference == false {
+            self.setShoppingItems()
+        } else {
+            self.loadFromPersistentStore()
+        }
+    }
+    
+    // MARK: - Variables
+    
     private (set) var shoppingItems: [ShoppingItem] = []
+    let shoppingPreferenceKey = "shoppingPreferenceKey"
+    
+    var shoppingItemsAdded: [ShoppingItem] {
+        return self.shoppingItems.filter { $0.hasBeenAdded == true }
+    }
+    
+    var shoppingItemNotAdded: [ShoppingItem] {
+        return self.shoppingItems.filter { $0.hasBeenAdded == false }
+    }
+    
+    var shoppingItemsPreference: Bool? {
+        return UserDefaults.standard.bool(forKey: shoppingPreferenceKey)
+    }
     
     private var shoppingFileURL: URL? {
         let filemanager = FileManager.default

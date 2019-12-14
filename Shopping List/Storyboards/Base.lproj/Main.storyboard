@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Shopping List Collection View Controller-->
         <scene sceneID="D2W-bR-Utt">
             <objects>
-                <collectionViewController id="gyv-wc-2aK" sceneMemberID="viewController">
+                <collectionViewController id="gyv-wc-2aK" customClass="ShoppingListCollectionViewController" customModule="Shopping_List" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="KWa-wB-EfG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rI5-zD-kJq">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rI5-zD-kJq" customClass="ShoppingItemCollectionViewCell" customModule="Shopping_List" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="w9n-Nk-NxA">
@@ -34,16 +34,48 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqg-1i-RaX">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tpm-LF-Grq">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tpm-LF-Grq">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOV-7v-HsJ">
+                                                    <rect key="frame" x="45" y="148" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VE3-Gg-hcr">
+                                                    <rect key="frame" x="20" y="19" width="80" height="121"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02N-j3-BpU">
+                                                    <rect key="frame" x="39" y="-10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nD5-Mb-Juh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
+                                                <constraint firstItem="LOV-7v-HsJ" firstAttribute="top" secondItem="nD5-Mb-Juh" secondAttribute="bottom" constant="8" symbolic="YES" id="97h-Kk-tEU"/>
+                                                <constraint firstItem="VE3-Gg-hcr" firstAttribute="bottom" secondItem="Tpm-LF-Grq" secondAttribute="bottom" id="Kvl-et-N7r"/>
                                                 <constraint firstAttribute="bottom" secondItem="Tpm-LF-Grq" secondAttribute="bottom" id="Lyc-Mf-0CF"/>
                                                 <constraint firstItem="Tpm-LF-Grq" firstAttribute="leading" secondItem="Wqg-1i-RaX" secondAttribute="leading" id="MJs-wm-hDS"/>
+                                                <constraint firstItem="VE3-Gg-hcr" firstAttribute="top" secondItem="nD5-Mb-Juh" secondAttribute="top" constant="19" id="NsS-IQ-Zaz"/>
+                                                <constraint firstItem="02N-j3-BpU" firstAttribute="centerX" secondItem="VE3-Gg-hcr" secondAttribute="centerX" id="RQp-QE-jAh"/>
+                                                <constraint firstItem="02N-j3-BpU" firstAttribute="top" secondItem="Wqg-1i-RaX" secondAttribute="top" constant="-10" id="RZ8-aN-pOe"/>
+                                                <constraint firstItem="02N-j3-BpU" firstAttribute="centerX" secondItem="Tpm-LF-Grq" secondAttribute="centerX" id="VRi-O9-CUe"/>
+                                                <constraint firstItem="VE3-Gg-hcr" firstAttribute="leading" secondItem="nD5-Mb-Juh" secondAttribute="leading" constant="20" id="Xpc-Nq-QA2"/>
+                                                <constraint firstItem="VE3-Gg-hcr" firstAttribute="bottom" secondItem="nD5-Mb-Juh" secondAttribute="bottom" id="eLK-M5-mYV"/>
+                                                <constraint firstItem="nD5-Mb-Juh" firstAttribute="leading" secondItem="Wqg-1i-RaX" secondAttribute="leading" id="isR-js-AuO"/>
                                                 <constraint firstAttribute="trailing" secondItem="Tpm-LF-Grq" secondAttribute="trailing" id="kG0-a2-GxY"/>
                                                 <constraint firstItem="Tpm-LF-Grq" firstAttribute="top" secondItem="Wqg-1i-RaX" secondAttribute="top" id="kNm-1q-T27"/>
+                                                <constraint firstItem="LOV-7v-HsJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wqg-1i-RaX" secondAttribute="leading" symbolic="YES" id="mVR-Ee-zky"/>
+                                                <constraint firstAttribute="trailing" secondItem="nD5-Mb-Juh" secondAttribute="trailing" id="rV7-as-92F"/>
+                                                <constraint firstAttribute="trailing" secondItem="LOV-7v-HsJ" secondAttribute="trailing" constant="33" id="vyq-ac-i60"/>
+                                                <constraint firstItem="nD5-Mb-Juh" firstAttribute="top" secondItem="02N-j3-BpU" secondAttribute="bottom" constant="-11" id="zGb-Hg-7bs"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -71,7 +103,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fsl-uv-RDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="110"/>
+            <point key="canvasLocation" x="672.46376811594212" y="109.82142857142857"/>
         </scene>
         <!--Shopping List Detail View Controller-->
         <scene sceneID="yYI-Aa-XWl">
