@@ -14,13 +14,15 @@ class ShoppingListDetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     
+    var shoppingListController: ShoppingListController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.updateViews()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func sendOrderTapped(_ sendOrderTapped: UIButton) {
+    @IBAction func sendOrderTapped(_ sender: UIButton) {
         guard let name = self.nameTextField.text, !name.isEmpty,
             let address = self.addressTextField.text, !address.isEmpty else { return }
         
@@ -30,7 +32,7 @@ class ShoppingListDetailViewController: UIViewController {
             self.showNoItemsAlert()
         }
     }
-    
+        
     private func updateViews() {
         if let controller = self.shoppingListController {
             self.shoppingListLabel.text = "You currently have \(controller.shoppingItemsAdded.count) item(s) in your shopping list."

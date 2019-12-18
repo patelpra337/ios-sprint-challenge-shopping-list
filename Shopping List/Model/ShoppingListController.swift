@@ -56,13 +56,14 @@ class ShoppingListController {
         self.saveToPersistentStore()
     }
     
-    func setShoppingItems() {
+    private func setShoppingItems() {
         let itemNames = ["Apple", "Grapes", "Milk", "Muffin", "Popcorn", "Soda", "Strawberries"]
         for name in itemNames {
             self.createShoppingItem(withName: name)
         }
         
-        
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: shoppingPreferenceKey)
     }
     
     // MARK: - Persistence
@@ -92,17 +93,4 @@ class ShoppingListController {
             print("Error loading shoppingItems: \(error)")
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
