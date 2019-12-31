@@ -54,7 +54,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7o-Lu-MkQ">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                             <connections>
-                                                <action selector="shoppingItemTapped:" destination="rI5-zD-kJq" eventType="touchUpInside" id="ixh-AR-hGw"/>
+                                                <action selector="shoppingItemTapped:" destination="rI5-zD-kJq" eventType="touchUpInside" id="tvI-CP-QcH"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -70,9 +70,9 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <outlet property="hasBeenAddedLabel" destination="U7o-Lu-MkQ" id="1h8-5v-gMO"/>
-                                    <outlet property="imageView" destination="bUT-2D-IWt" id="uGk-Iw-JLU"/>
-                                    <outlet property="nameLabel" destination="lZY-2w-RFv" id="xEy-t9-cJ0"/>
+                                    <outlet property="hasBeenAddedLabel" destination="wyK-BA-4Cj" id="qeW-YW-Ygj"/>
+                                    <outlet property="imageView" destination="bUT-2D-IWt" id="2bp-F1-WbI"/>
+                                    <outlet property="nameLabel" destination="lZY-2w-RFv" id="T6h-EP-PVy"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -84,7 +84,7 @@
                     <navigationItem key="navigationItem" id="QFK-s9-MXL">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus.square.fill.on.square.fill" catalog="system" id="ZFe-jq-XKU">
                             <connections>
-                                <segue destination="bbM-rS-iyL" kind="show" identifier="ToSenderOrder" id="bco-nj-59Y"/>
+                                <segue destination="bbM-rS-iyL" kind="show" identifier="ToSendOrder" id="bco-nj-59Y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

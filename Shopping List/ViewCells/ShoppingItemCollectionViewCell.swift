@@ -23,7 +23,6 @@ class ShoppingItemCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: ShoppingItemCollectionViewCellDelegate?
     
-    
     @IBAction func shoppingItemTapped(_ sender: UIButton) {
         delegate?.toggleHasBeenAdd(for: self)
         updateViews()

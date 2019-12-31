@@ -41,9 +41,10 @@ class ShoppingListCollectionViewController: UICollectionViewController {
             return UICollectionViewCell() }
         
         let ShoppingItem = self.shoppingListController.shoppingItems[indexPath.item]
-        cell.nameLabel.text = ShoppingItem.name
-        cell.imageView.image = UIImage(named: ShoppingItem.name)
-//      cell.hasBeenAddedLabel.text = ShoppingItem.hasBeenAdded ? "Added" : "Not Added"
+        cell.shoppingItem = ShoppingItem
+        //cell.nameLabel.text = ShoppingItem.name
+        //cell.imageView.image = UIImage(named: ShoppingItem.name)
+        //cell.hasBeenAddedLabel.text = ShoppingItem.hasBeenAdded ? "Added" : "Not Added"
         cell.delegate = self
         
         return cell
